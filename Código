@@ -1,0 +1,18 @@
+Install.packages("MVA")
+library("MVA")
+demo("Ch-MVA")
+#Diagrama de dispersión
+mlab <-"Empresas manufacturerascon 20 empleados o más"
+Plab<-"Tamaño de la población en miles (caso 1970)"
+plot(popul ~ manu, data=USairpollution, xlab=mlab, ylab = plab)
+## Diagrama de caja bicariado
+## para afirmar un olaneyer se requiere graficar su densidad
+rug(USairpollution$manu, side=1)
+rug(USairpollution$popul, side=2) # side para los ejes 
+hist(USairpollution$manu, main = "")
+boxplot(USairpollution$popu1) # ya nos dice los olanyers más claros  es la más utilizada para densidades 
+layout(matrix(c(2, 0, 1, 3), nrow = 2, byrow = TRUE), widths = c(2, 1), respect = TRUE))
+xlim <- ranger(USairpollution$manu) *1.1
+xlim <- with(USairpollution, ranger(menu) * 1.1
+plot(popul ~ manu, data =  USairpollution, cex.lab = 0.5, xlab  = mlab, ylab= plab, type = "n", xlim=xlim)
+with(USairpollution, tex(manu,popul, cex = 1.2, Tabels = abreviate(row,mames(USairpollution))))
